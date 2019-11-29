@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <p>修改 JSON 对象的值</p>
+        <p id="demo"></p>
+        <script>
+            var myObj,i,x="";
+            myObj ={
+                "name":"1",
+                "alexa":1,
+                "sites":{
+                    "sites1":"1111111",
+                    "sites2":"2222222",
+                    "sites3":"3333333"
+                }
+            }
+            myObj.sites.sites1 ="使用（.）来修改JSON 对象的值";
+            myObj.sites["sites2"]="使用（[]）修改"
+
+            for(i in myObj.sites){
+                x += myObj.sites[i] + "<br>";
+            }
+
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p>访问 JSON 内嵌对象</p>
+        <p id="demo"></p>
+        <script>
+            myObj ={
+                "name":"name",
+                "alexa":1,
+                "sites":{
+                    "sites1":"sites11111",
+                    "sites2":"sites22222",
+                    "sites3":"sites33333"
+                }
+            }
+            document.getElementById("demo").innerHTML += myObj.sites.sites1 + "<br>";
+            document.getElementById("demo").innerHTML += myObj.sites["sites2"];
+        </script>
+    </body>
+</html>

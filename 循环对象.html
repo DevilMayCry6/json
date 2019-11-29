@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <p>使用 for-in 来循环对象的属性</p>
+        <p id="demo"></p>
+        <script>
+            var myObj ={
+                "name":"1","aleax":"11","site":null
+            }
+            for(x in myObj){
+                // document.getElementById('demo').innerHTML += x+"<br>";
+                document.getElementById("demo").innerHTML+=myObj[x] + "<br>"; 
+            }
+            
+        </script>
+</html>
