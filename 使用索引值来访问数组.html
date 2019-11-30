@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <p>访问 JSON 对象数组值</p>
+        <p id="demo"></p>
+        <script>
+            var myObj,x;
+            myObj={
+                "name":"网站",
+                "num":3,
+                "sites":["11","22","33"]
+            }
+            x= myObj.sites[1];
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

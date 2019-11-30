@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <p>循环内嵌数组：</p>
+        <p id="demo"></p>
+        <script>
+            var myObj,i,j,x="";
+            myObj={
+                "name":"网站",
+                "num":3,
+                "sites":[
+                    {"name":"1111","info":["1122","112222","11333"]},
+                    {"name":"2222","info":["22222","222222","223333"]},
+                    {"name":"3333","info":["333","333222"]}
+                ]
+            }
+
+            for(i in myObj.sites){
+                 x += "<h1>" + myObj.sites[i].name +"</h1>";
+                 for(j in myObj.sites[i].info){
+                     x += myObj.sites[i].info[j] +"<br>";
+                 }
+            }
+
+            document.getElementById("demo").innerHTML =x;
+        </script>
+    </body>
+</html>

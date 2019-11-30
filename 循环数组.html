@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var myObj,i,x="";
+            myObj ={
+                "name":"网站",
+                "num":3,
+                "sites":["11","22","33"]
+            }
+
+            for(i in myObj.sites){
+                x += myObj.sites[i] + "<br>"
+            }
+
+            document.getElementById("demo").innerHTML = x;
+
+
+            for(i = 0;i< myObj.sites.length;i++){
+                x += myObj.sites[i] + "<br>";
+            }
+
+            document.getElementById("demo").innerHTML =x;
+        </script>
+    </body>
+</html>

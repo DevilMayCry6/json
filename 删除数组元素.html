@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <p>使用delete关键字来删除数组元素</p>
+        <p id="demo"></p>
+        <script>
+            var myObj,i,x="";
+            myObj={
+                "name":"网站",
+                "num":3,
+                "sites":["000","111","222"]
+            }
+            delete myObj.sites[1];
+
+            for(i in myObj.sites){
+                x += myObj.sites[i]+"<br>"
+            }
+
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>
