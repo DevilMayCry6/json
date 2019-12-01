@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p>JSON 不允许包含函数，单可以将函数作为字符串存储，之后再将字符串转为函数</p>
+
+        <p id="demo"></p>
+        <script>
+            var text ='{"name":"1","alexa":"function(){return 100}","site":"site"}';
+            var obj = JSON.parse(text);
+            obj.alexa = eval("(" +obj.alexa + ")");
+
+            document.getElementById("demo").innerHTML = obj.name +"ALexa排名：" + obj.alexa();
+        </script>
+    </body>
+</html>
