@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p>将 js 对象转换为 JSON 字符串</p>
+        <p id="demo"></p>
+        <script>
+            var obj ={"name":"name1","alexa":1,"site":"site1"};
+            var myJSON = JSON.stringify(obj);
+            document.getElementById("demo").innerHTML = myJSON;
+        </script>
+
+        <p>将 js数组转换为 JSON 对象</p>
+        <p id="demo1"></p>
+        <script>
+            var arr =["1","2","3","4"];
+            var myJSON =JSON.stringify(arr);
+            document.getElementById("demo1").innerHTML = myJSON;
+        </script>
+    </body>
+</html>

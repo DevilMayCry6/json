@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <p>JSON 不能存储 Date 对象</p>
+        <p>JSON.stringify()会将所有日期转换为字符串</p>
+        <p id="demo"></p>
+        <script>
+            var obj ={"name":"111","initDate":new Date(),"site":"site1"};
+            var myJSON = JSON.stringify(obj);
+            document.getElementById("demo").innerHTML =myJSON;
+        </script>
+    </body>
+</html>
