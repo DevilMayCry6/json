@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h2>从 JSON 字符串中创建对象</h2>
+        <p>
+            名字：<span id="name"></span><br>
+            地址：<span id="url"></span>
+        </p>
+        <script>
+            var txt='{"sites":['+
+            '{ "name":"JSON","url":"https://github.com/DevilMayCry6"},' + 
+            '{ "name":"111","url":"aaaaa"},' +
+            '{ "name":"222","url":"bbbb"} ]}'
+
+            // var obj =eval ("(" +txt + ")");
+            obj= JSON.parse(txt); 
+
+            document.getElementById("name").innerHTML=obj.sites[2].name
+            document.getElementById("url").innerHTML = obj.sites[0].url
+        </script>
+    </body>
+</html>
