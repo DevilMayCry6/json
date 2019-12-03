@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <p>如客户想访问： https://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction</p>
+        <p>假设客户期望返回数据：["customername1","customername2"]</p>
+        <p>真正返回到客户端的数据显示为：callbackFunction(["customername1","customername2"])</p>
+        <p>服务端文件 jsonp.php 代码为</p>
+        <xmp>
+            <?php
+            header('Content-type: application/json');
+            //获取回调函数
+            $jsoncallback = htmlspecialchars($_REQUEST['jsoncallback']);
+            //json 数据
+            $json_data ='["customername1","customername2"]';
+            //输出jsonp格式的数据
+            echo $jsoncallback . "(" .$json_data .")";
+            ?>
+        </xmp>
+        <div id="divCustomers"></div>
+
+        <!-- 客户端实现 callbackFunction 函数 -->
+        <script>
+            function callbackFunction(result,methodName)
+            {
+                var html ='<ul>';
+                for(var i = 0; i<result.length;i++)
+                {
+                    html +='<li>' + result[i] + '</li>';
+                }
+                html += '</ul>';
+                document.getElementById('divCustomers').innerHTML =html;
+            }
+        </script>
+        <script type="text/javascript" src="https://www.runoob.com/try/ajax/jsonp.php?jsoncallback=callbackFunction"></script>
+    </body>
+</html>
